@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Marydale-bold";
+  src: url("./fonts/Marydale Bold.ttf") format("truetype");
+  src: url("./fonts/Marydale Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Marydale-regular";
+  src: url("./fonts/Marydale Regular.ttf") format("truetype");
+  src: url("./fonts/Marydale Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Open-sans";
+  src: url("./fonts/Marydale Bold.ttf") format("truetype");
+  src: url("./fonts/Marydale Bold.woff") format("woff");
+}/*# sourceMappingURL=style.css.map */
