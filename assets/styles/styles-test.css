@@ -1,0 +1,65 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  padding: 0.5em 2em; /* divided by 10 */
+  background-color: beige;
+}
+
+img {
+  width: 10%;
+}
+
+.title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  color: #005BA7;
+  font-size: 7.2pt; /* divided by 10 */
+  margin-bottom: 1px; /* divided by 10 */
+}
+.title--green {
+  color: #0FA15C;
+}
+
+.subtitle {
+  font-size: 3.6pt; /* divided by 10 */
+}
+
+.container--blue-wave {
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.bluewave {
+  z-index: 0;
+  position: relative;
+}
+
+p {
+  font-size: 4.5pt; /* divided by 10 */
+}
+
+.moon {
+  width: 50px; /* divided by 10 */
+}
+
+.bigstar {
+  position: absolute;
+  top: 2.8em; /* divided by 10 */
+  right: 1.5em; /* divided by 10 */
+  width: 15px; /* divided by 10 */
+}
+
+.star {
+  position: absolute;
+  top: 4.3em; /* divided by 10 */
+  right: 0.8em; /* divided by 10 */
+  width: 11.3px; /* divided by 10 */
+}
+
+.red-car {
+  width: 5px; /* divided by 10 */
+  height: auto;
+}/*# sourceMappingURL=styles-test.css.map */

@@ -1,0 +1,77 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+// USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+
+// Colors :
+$ntnublue: #005BA7;
+$miljogreen: #0FA15C;
+
+body {
+    padding: 0.5em 2em; /* divided by 10 */
+    background-color: beige;
+}
+
+img {
+    width: 10%;
+}
+
+// Container whitewave
+.title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: $ntnublue;
+    font-size: 7.2pt; /* divided by 10 */
+    margin-bottom: 1px; /* divided by 10 */
+
+    &--green {
+        color: $miljogreen;
+    }
+}
+
+.subtitle {
+    font-size: 3.6pt; /* divided by 10 */
+}
+// end of container white wave
+
+// Container Bluewave
+.container--blue-wave {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+.bluewave {
+    z-index: 0;
+    position: relative;
+}
+
+p {
+    font-size: 4.5pt; /* divided by 10 */
+}
+
+.moon {
+    width: 50px; /* divided by 10 */
+}
+
+.bigstar {
+    position: absolute;
+    top: 2.8em; /* divided by 10 */
+    right: 1.5em; /* divided by 10 */
+    width: 15px; /* divided by 10 */
+}
+
+.star {
+    position: absolute;
+    top: 4.3em; /* divided by 10 */
+    right: 0.8em; /* divided by 10 */
+    width: 11.3px; /* divided by 10 */
+}
+
+// end of Container Bluewave
+
+.red-car {
+    width: 5px; /* divided by 10 */
+    height: auto;
+}
