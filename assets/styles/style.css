@@ -10,6 +10,149 @@
 }
 @font-face {
   font-family: "Open-sans";
-  src: url("./fonts/Marydale Bold.ttf") format("truetype");
-  src: url("./fonts/Marydale Bold.woff") format("woff");
+  src: url("./fonts/Open Sans Bold.ttf") format("truetype");
+  src: url("./fonts/Open Sans Bold.woff") format("woff");
+}
+body {
+  background-color: rgb(255, 254, 254);
+  margin: 0;
+}
+
+.header--white-wave {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+}
+.header--white-wave__item {
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  padding-left: 5vw;
+  padding-top: 1.3vw;
+}
+.header--white-wave__title {
+  font-family: "Open-sans";
+  font-size: 4vw;
+  color: #005BA7;
+  margin-bottom: 0;
+}
+.header--white-wave__title--green {
+  color: #0FA15C;
+}
+.header--white-wave__subtitle {
+  font-family: "Marydale-regular";
+  font-size: 1.95vw;
+}
+
+.cont--blue-wave {
+  position: absolute;
+  top: 11.3vw;
+  z-index: 4;
+  width: 100%;
+  height: auto;
+}
+.cont--blue-wave__img {
+  position: relative;
+}
+.cont--blue-wave__text {
+  font-family: "Marydale-bold";
+  position: absolute;
+  top: 16vw;
+  font-size: 2.5vw;
+  padding-left: 5vw;
+  color: white;
+}
+
+.moon {
+  width: 25vw;
+  position: absolute;
+  top: 9vw;
+  right: 7vw;
+}
+
+.bigstar {
+  position: absolute;
+  top: 3.5vw;
+  right: 6vw;
+  width: 7vw;
+}
+
+.star {
+  position: absolute;
+  top: 13vw;
+  right: 2vw;
+  width: 4.5vw;
+}
+
+.cont--lightblue-wave {
+  position: absolute;
+  top: 38vw;
+  z-index: 3;
+  width: 100%;
+  height: auto;
+}
+.cont--lightblue-wave__img {
+  position: relative;
+}
+.cont--lightblue-wave__item {
+  position: absolute;
+  top: 30vw;
+  width: 55vw;
+  padding-left: 5vw;
+}
+
+.cont--lightred-wave {
+  position: absolute;
+  top: 36vw;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.footer {
+  position: absolute;
+  top: 150vw;
+  z-index: 5;
+}
+.footer__img {
+  width: 40vw;
+}
+.footer__link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer--white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0;
+}
+.footer--white__text {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  text-align: left;
+  font-family: "Marydale-bold";
+}
+
+.footer--blue {
+  background-color: #005BA7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer--blue__img {
+  width: 40vw;
+}
+.footer--blue__item {
+  padding: 2vw;
+}
+.footer--blue__link {
+  color: rgb(255, 255, 255);
+  font-family: "Marydale-bold";
+  text-decoration: none;
+  font-size: 1.5vw;
 }/*# sourceMappingURL=style.css.map */
