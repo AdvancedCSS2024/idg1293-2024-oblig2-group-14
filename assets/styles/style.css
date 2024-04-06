@@ -12,4 +12,68 @@
   font-family: "Open-sans";
   src: url("./fonts/Marydale Bold.ttf") format("truetype");
   src: url("./fonts/Marydale Bold.woff") format("woff");
+}
+@keyframes obliqueUpDown {
+  0%, 100% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(100px, 100px); /* Move up and right */
+  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+}
+
+.image-holder {
+  border: 1px solid red;
+  position: relative;
+  min-height: 100px; /* Or any other value */
+  width: 100%; /* Or any other value */
+}
+.image-holder__image {
+  width: 10%;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  animation: obliqueUpDown 3s infinite ease-in-out;
+}
+
+#wave {
+  position: absolute;
+  height: 70px;
+  width: 600px;
+  background: #e0efe3;
+}
+
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 340px;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  top: 40px;
+}
+
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 300px;
+  height: 70px;
+  background-color: #e0efe3;
+  left: 0;
+  top: 27px;
 }/*# sourceMappingURL=style.css.map */
