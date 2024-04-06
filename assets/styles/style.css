@@ -13,12 +13,20 @@
   src: url("./fonts/Marydale Bold.ttf") format("truetype");
   src: url("./fonts/Marydale Bold.woff") format("woff");
 }
-@keyframes obliqueUpDown {
+@keyframes diagonalLeftRight {
   0%, 100% {
     transform: translate(0px, 0px);
   }
   50% {
-    transform: translate(100px, 100px); /* Move up and right */
+    transform: translate(100px, 100px);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 html, body {
@@ -36,15 +44,23 @@ body {
 .image-holder {
   border: 1px solid red;
   position: relative;
-  min-height: 100px; /* Or any other value */
-  width: 100%; /* Or any other value */
+  min-height: 100px;
+  width: 100%;
 }
 .image-holder__image {
-  width: 10%;
+  width: 100px;
   position: absolute;
   top: 30%;
   left: 30%;
-  animation: obliqueUpDown 3s infinite ease-in-out;
+  transform: translate(-50%, -50%);
+  animation: diagonalLeftRight 3s infinite ease-in-out;
+}
+.image-holder__image--bigstar {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: spin 5s infinite;
 }
 
 #wave {
