@@ -41,14 +41,13 @@
       body{
         display: flex;
         justify-content: center;
-        justify-content: center;
       }
 
       .image-holder{
             border: 1px solid red;
                 position: relative;
                 min-height: 100px;
-                width: 100%;
+                width: 50%;
 
                 &__image{
                     width: 100px;
@@ -95,5 +94,13 @@
                     background-color: #e0efe3;
                     left: 0;
                     top: 27px;
+                  }
+
+                  .eyeball-holder{
+                    width: 50%;
+
+                    &__image{
+                        width: 200px;
+                    }
                   }
                 

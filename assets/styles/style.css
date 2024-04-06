@@ -38,14 +38,13 @@ html, body {
 body {
   display: flex;
   justify-content: center;
-  justify-content: center;
 }
 
 .image-holder {
   border: 1px solid red;
   position: relative;
   min-height: 100px;
-  width: 100%;
+  width: 50%;
 }
 .image-holder__image {
   width: 100px;
@@ -60,7 +59,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: spin 5s infinite;
+  animation: spin 3s infinite;
 }
 
 #wave {
@@ -92,4 +91,11 @@ body {
   background-color: #e0efe3;
   left: 0;
   top: 27px;
+}
+
+.eyeball-holder {
+  width: 50%;
+}
+.eyeball-holder__image {
+  width: 200px;
 }/*# sourceMappingURL=style.css.map */
