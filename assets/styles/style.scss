@@ -1,20 +1,106 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
 @font-face {
-    font-family: 'Marydale-bold';
-    src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Bold.woff') format('woff');
+  font-family: 'Marydale-bold';
+  src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
+  src: url('./fonts/Marydale\ Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Marydale-regular';
+  src: url('./fonts/Marydale\ Regular.ttf') format('truetype');
+  src: url('./fonts/Marydale\ Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open-sans';
+  src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
+  src: url('./fonts/Marydale\ Bold.woff') format('woff');
+}
+
+@keyframes diagonalLeftRight {
+  0%, 100% {
+    transform: translate(0px, 0px);
   }
-  
-  @font-face {
-    font-family: 'Marydale-regular';
-    src: url('./fonts/Marydale\ Regular.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Regular.woff') format('woff');
+  50% {
+    transform: translate(100px, 100px);
   }
+}
 
-  @font-face {
-    font-family: 'Open-sans';
-    src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Bold.woff') format('woff');
-  } 
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
 
 
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }  
+
+    body{
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-holder{
+          border: 1px solid red;
+              position: relative;
+              min-height: 100px;
+              width: 50%;
+
+              &__image{
+                  width: 100px;
+                  position: absolute;
+                  top: 30%;
+                  left: 30%;
+                  transform: translate(-50%, -50%);
+                animation: diagonalLeftRight 3s infinite ease-in-out;
+
+                &--bigstar{
+                  width: 100px;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  animation: spin 3s infinite
+                }
+              }
+              }
+              
+              #wave {
+                  position: absolute;
+                  height: 70px;
+                  width: 600px;
+                  background: #e0efe3;
+                }
+                #wave:after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  border-radius: 100% 50%;
+                  width: 340px;
+                  height: 80px;
+                  background-color: white;
+                  right: -5px;
+                  top: 40px;
+                }
+                #wave:before {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  border-radius: 100% 50%;
+                  width: 300px;
+                  height: 70px;
+                  background-color: #e0efe3;
+                  left: 0;
+                  top: 27px;
+                }
+
+                .eyeball-holder{
+                  width: 50%;
+
+                  &__image{
+                      width: 200px;
+                  }
+                }
+              
