@@ -46,6 +46,7 @@ body {
       font-size: 4vw;
       color: $ntnublue;
       margin-bottom: 0;
+      
   
       &--green {
           color: $miljogreen;
@@ -55,13 +56,15 @@ body {
     &__subtitle {
       font-family: 'Marydale-regular';
       font-size: 1.95vw;
+      line-height: 1.1;
+
      
     }
 }
 // Container blue wave
 .cont--blue-wave {
   position: absolute;
-  top: 11.3vw;
+  top: 11vw;
   z-index: 4;
   width: 100%;
   height: auto;
@@ -73,10 +76,11 @@ body {
   &__text {
     font-family: 'Marydale-bold';
     position: absolute;
-    top: 16vw;
+    top: 17vw;
     font-size: 2.5vw;
     padding-left: 5vw;
     color: white;
+    line-height: 1.1;
   }
 }
 
@@ -129,7 +133,7 @@ body {
 // lightred-wave 
 .cont--lightred-wave {
   position: absolute;
-  top: 36vw;
+  top: 66vw;
   width: 100%;
   height: auto;
   z-index: 2;
@@ -167,7 +171,7 @@ body {
 // Footer
 .footer {
   position: absolute;
-  top: 170vw;
+  top: 131.4vw;
   z-index: 5;
 
   &__img {
@@ -201,6 +205,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10%;
 
   &__img {
     width: 30vw;
