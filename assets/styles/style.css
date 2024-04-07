@@ -15,10 +15,26 @@
 }
 @keyframes diagonalLeftRight {
   0%, 100% {
-    transform: translate(0px, 0px);
+    transform: translate(100px, 100px);
   }
   50% {
-    transform: translate(100px, 100px);
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes backAndForth {
+  0%, 100% {
+    transform: translate(-100px, 0px);
+  }
+  50% {
+    transform: translate(50px, 0px);
+  }
+}
+@keyframes rotate-then-back {
+  0%, 100% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
   }
 }
 @keyframes spin {
@@ -27,6 +43,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }
 html, body {
@@ -59,7 +83,35 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  animation: spin 3s infinite;
+  animation: spin 6s infinite;
+}
+.image-holder__image--moon {
+  max-width: 200px;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  animation: rotate-then-back 6s ease-in-out infinite;
+}
+.image-holder__image--left {
+  width: 100px;
+  position: absolute;
+  bottom: 15%;
+  left: 30%;
+  animation: backAndForth 5s ease-in-out infinite;
+}
+.image-holder__image--right {
+  width: 100px;
+  position: absolute;
+  bottom: 0%;
+  right: 20%;
+  animation: backAndForth 5s ease-in-out infinite;
+}
+.image-holder__image--star {
+  width: 50px;
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  animation: spin 4s linear infinite;
 }
 
 #wave {
@@ -91,11 +143,4 @@ body {
   background-color: #e0efe3;
   left: 0;
   top: 27px;
-}
-
-.eyeball-holder {
-  width: 50%;
-}
-.eyeball-holder__image {
-  width: 200px;
 }/*# sourceMappingURL=style.css.map */

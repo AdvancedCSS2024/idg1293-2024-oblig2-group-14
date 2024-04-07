@@ -19,16 +19,35 @@
 
 @keyframes diagonalLeftRight {
   0%, 100% {
-    transform: translate(0px, 0px);
-  }
-  50% {
     transform: translate(100px, 100px);
   }
+  50% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes backAndForth {
+  0%, 100% {
+    transform: translate(-100px, 0px);
+  }
+  50% {
+    transform: translate(50px, 0px);
+  }
+}
+
+@keyframes rotate-then-back {
+  0%, 100% {transform: rotate(-30deg);}
+  50% {transform: rotate(30deg);}
 }
 
 @keyframes spin {
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 
@@ -62,7 +81,36 @@
                   position: absolute;
                   top: 50%;
                   left: 50%;
-                  animation: spin 3s infinite
+                  animation: spin 6s infinite;
+                }
+
+                &--moon{
+                  max-width: 200px;
+                  position: absolute;
+                  top: 10%;
+                  right: 20%;
+                  animation: rotate-then-back 6s ease-in-out infinite;
+                }
+                &--left{
+                  width: 100px;
+                  position: absolute;
+                  bottom: 15%;
+                  left: 30%;
+                  animation: backAndForth 5s ease-in-out infinite;
+                }
+                &--right{
+                  width: 100px;
+                  position: absolute;
+                  bottom: 0%;
+                  right: 20%;
+                  animation: backAndForth 5s ease-in-out infinite;
+                }
+                &--star{
+                  width: 50px;
+                  position: absolute;
+                  top: 60%;
+                  left: 65%;
+                  animation: spin 4s linear infinite;
                 }
               }
               }
@@ -95,12 +143,3 @@
                   left: 0;
                   top: 27px;
                 }
-
-                .eyeball-holder{
-                  width: 50%;
-
-                  &__image{
-                      width: 200px;
-                  }
-                }
-              
