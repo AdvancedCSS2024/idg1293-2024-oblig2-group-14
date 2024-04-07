@@ -109,14 +109,33 @@ body {
   height: auto;
   z-index: 2;
 }
+.cont--lightred-wave__img {
+  position: relative;
+}
+.cont--lightred-wave__icon {
+  z-index: 3;
+  position: absolute;
+  top: 58vw;
+  left: 10vw;
+  right: auto;
+  width: 80%;
+}
+
+.cont--earth {
+  position: absolute;
+  top: 88.5vw;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
 
 .footer {
   position: absolute;
-  top: 150vw;
+  top: 170vw;
   z-index: 5;
 }
 .footer__img {
-  width: 40vw;
+  width: 25vw;
 }
 .footer__link {
   display: flex;
@@ -145,14 +164,17 @@ body {
   align-items: center;
 }
 .footer--blue__img {
-  width: 40vw;
+  width: 30vw;
 }
 .footer--blue__item {
   padding: 2vw;
+}
+.footer--blue__item--divider {
+  z-index: 5;
 }
 .footer--blue__link {
   color: rgb(255, 255, 255);
   font-family: "Marydale-bold";
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }/*# sourceMappingURL=style.css.map */
