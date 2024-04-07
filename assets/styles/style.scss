@@ -134,6 +134,27 @@ body {
   height: auto;
   z-index: 2;
 
+  &__img {
+    position: relative;
+  }
+
+  //kids svg
+  &__icon {
+    z-index: 3;
+    position: absolute;
+    top: 58vw;
+    left: 10vw;
+    right: auto;
+    width: 80%;
+  }
+}
+
+.cont--earth {
+  position: absolute;
+  top: 88.5vw;
+  width: 100%;
+  height: auto;
+  z-index: 2;
 }
 // end of lightred-wave
 
@@ -146,11 +167,11 @@ body {
 // Footer
 .footer {
   position: absolute;
-  top: 150vw;
+  top: 170vw;
   z-index: 5;
 
   &__img {
-    width: 40vw;
+    width: 25vw;
   }
 
   &__link {
@@ -182,20 +203,22 @@ body {
   align-items: center;
 
   &__img {
-    width: 40vw;
+    width: 30vw;
   }
   
   &__item {
     padding: 2vw;
+
+    &--divider {
+      z-index: 5;
+    }
   }
 
   &__link {
     color: rgb(255, 255, 255);
     font-family: 'Marydale-bold';
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 }
-
-
 // end of footer
