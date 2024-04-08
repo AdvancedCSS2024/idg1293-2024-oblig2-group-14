@@ -54,8 +54,11 @@
   }
 }
 body {
-  background-color: rgb(255, 254, 254);
   margin: 0;
+}
+
+* {
+  border: 1px solid cyan;
 }
 
 .header--white-wave {
@@ -99,7 +102,7 @@ body {
 .cont--blue-wave__text {
   font-family: "Marydale-bold";
   position: absolute;
-  top: 17vw;
+  top: 17.1vw;
   font-size: 2.5vw;
   padding-left: 5vw;
   color: white;
@@ -107,10 +110,10 @@ body {
 }
 
 .moon {
-  width: 25vw;
   position: absolute;
   top: 9vw;
   right: 7vw;
+  width: 25vw;
   animation: rotate-then-back 6s ease-in-out infinite;
 }
 
@@ -133,42 +136,93 @@ body {
 .cont--lightblue-wave {
   position: absolute;
   top: 38vw;
-  z-index: 3;
   width: 100%;
   height: auto;
 }
 .cont--lightblue-wave__img {
+  z-index: 3;
   position: relative;
 }
-.cont--lightblue-wave__item {
+.cont--lightblue-wave__icon--car {
   position: absolute;
-  top: 30vw;
+  top: 3vw;
   width: 55vw;
   padding-left: 5vw;
+  z-index: 4;
 }
 
 .cont--lightred-wave {
-  position: absolute;
-  top: 66vw;
+  position: relative;
+  top: 40vw;
   width: 100%;
   height: auto;
-  z-index: 2;
 }
 .cont--lightred-wave__img {
+  z-index: 2;
+}
+.cont--lightred-wave__item {
   position: relative;
 }
-.cont--lightred-wave__icon {
-  z-index: 3;
+.cont--lightred-wave__item {
+  z-index: 4;
   position: absolute;
-  top: 58vw;
+  top: -12.5vw;
   left: 10vw;
   right: auto;
   width: 80%;
 }
 
+.greenguy {
+  position: absolute;
+  top: 0;
+}
+.greenguy--small {
+  width: 4.5vw;
+}
+.greenguy--medium {
+  width: 5.5vw;
+}
+.greenguy--large {
+  width: 9.6vw;
+}
+
+#gg-1 {
+  top: 13.5vw;
+}
+
+#gg-2 {
+  top: 16.5vw;
+  left: 23.5vw;
+}
+
+#gg-3 {
+  top: 4vw;
+  left: 18.6vw;
+}
+
+#gg-4 {
+  top: 1.5vw;
+  left: 46vw;
+}
+
+#gg-5 {
+  top: -3.5vw;
+  left: 64vw;
+}
+
+#gg-5 {
+  top: -3.5vw;
+  left: 64vw;
+}
+
+#gg-6 {
+  top: 14.7vw;
+  right: -2vw;
+}
+
 .cont--earth {
   position: absolute;
-  top: 88.5vw;
+  top: 87.8vw;
   width: 100%;
   height: auto;
   z-index: 2;

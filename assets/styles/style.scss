@@ -1,4 +1,4 @@
-// USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+// Fonts
 @font-face {
     font-family: 'Marydale-bold';
     src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
@@ -55,12 +55,24 @@
 $ntnublue: #005BA7;
 $miljogreen: #0FA15C;
 
+
+// Body
 body {
-  background-color: rgb(255, 254, 254);
   margin: 0;
 }
 
-// Container whitewave
+* {
+  border: 1px solid cyan;
+}
+
+// End of body
+
+// Commons 
+
+
+// End of commons
+
+// White wave
 .header--white-wave {
   position: relative;
   z-index: 5;
@@ -95,7 +107,10 @@ body {
      
     }
 }
-// Container blue wave
+// End of white wave
+
+
+// Blue wave
 .cont--blue-wave {
   position: absolute;
   top: 11vw;
@@ -110,7 +125,7 @@ body {
   &__text {
     font-family: 'Marydale-bold';
     position: absolute;
-    top: 17vw;
+    top: 17.1vw;
     font-size: 2.5vw;
     padding-left: 5vw;
     color: white;
@@ -119,10 +134,10 @@ body {
 }
 
 .moon {
-    width: 25vw;
-    position: absolute;
-    top: 9vw;
-    right: 7vw;
+  position: absolute;
+  top: 9vw;
+  right: 7vw;
+  width: 25vw;
     animation: rotate-then-back 6s ease-in-out infinite;
 }
 
@@ -141,57 +156,117 @@ body {
     width: 4.5vw;
     animation: spin 4s linear infinite;
 }
-// End of Container blue wave
+// End of Blue wave
 
 
-// lightblue wave
+// Lightblue wave
 .cont--lightblue-wave {
   position: absolute;
   top: 38vw;
-  z-index: 3;
   width: 100%;
   height: auto;
   
   &__img {
+    z-index: 3;
     position: relative;
   }
 
   // Car svg
-  &__item {
+  &__icon--car {
     position: absolute;
-    top: 30vw;
+    top: 3vw;
     width: 55vw;
     padding-left: 5vw;
+    z-index: 4;
   }
 }
-// end of lightblue wave
+// End of Lightblue wave
 
-// lightred-wave 
+
+// Lightred "wave" 
 .cont--lightred-wave {
-  position: absolute;
-  top: 66vw;
+  position: relative;
+  top: 40vw;
   width: 100%;
   height: auto;
-  z-index: 2;
-
+  
   &__img {
+    z-index: 2;
+  }
+
+  &__item {
     position: relative;
   }
 
   //kids svg
-  &__icon {
-    z-index: 3;
+  &__item {
+    z-index: 4;
     position: absolute;
-    top: 58vw;
+    top: -12.5vw;
     left: 10vw;
     right: auto;
     width: 80%;
   }
 }
 
+// GreenGuys 
+.greenguy {
+  position: absolute;
+  top: 0;
+
+  &--small {
+    width: 4.5vw;
+  }
+
+  &--medium {
+    width: 5.5vw;
+  }
+
+  &--large {
+    width: 9.6vw;
+  }
+
+}
+
+#gg-1 {
+  top: 13.5vw;
+}
+
+#gg-2 {
+  top: 16.5vw;
+  left: 23.5vw;
+}
+
+#gg-3 {
+  top: 4vw;
+  left: 18.6vw;
+}
+
+#gg-4 {
+  top: 1.5vw;
+  left: 46vw;
+}
+
+#gg-5 {
+  top: -3.5vw;
+  left: 64vw;
+}
+
+#gg-5 {
+  top: -3.5vw;
+  left: 64vw;
+}
+
+#gg-6 {
+  top: 14.7vw;
+  right: -2vw;
+}
+// End of GreenGuy (rip the hulk)
+
+// Earth
 .cont--earth {
   position: absolute;
-  top: 88.5vw;
+  top: 87.8vw;
   width: 100%;
   height: auto;
   z-index: 2;
@@ -269,10 +344,12 @@ body {
 }
 }
 
+// eyes
 
-// Earth
+// End of Eye 
 
-// end of earth
+// End of Earth (WHAT?!)
+// End of Lightred "wave"
 
 
 // Footer
@@ -291,6 +368,7 @@ body {
   }
 }
 
+// White Footer
 .footer--white {
   display: flex;
   justify-content: center;
@@ -306,7 +384,9 @@ body {
     font-family: 'Marydale-bold';
   }
 }
+// End of White Footer
 
+// Blue Footer
 .footer--blue {
   background-color: $ntnublue;
   display: flex;
@@ -333,4 +413,5 @@ body {
     font-size: 1vw;
   }
 }
-// end of footer
+// End of Blue Footer
+// End of Footer
