@@ -17,6 +17,40 @@
     src: url('./fonts/Open\ Sans\ Bold.woff') format('woff');
   }
 
+
+  @keyframes diagonalLeftRight {
+    0%, 100% {
+      transform: translate(100px, 100px);
+    }
+    50% {
+      transform: translate(0px, 0px);
+    }
+  }
+  
+  @keyframes backAndForth {
+    0%, 100% {
+      transform: translate(-100px, 0px);
+    }
+    50% {
+      transform: translate(50px, 0px);
+    }
+  }
+  
+  @keyframes rotate-then-back {
+    0%, 100% {transform: rotate(-30deg);}
+    50% {transform: rotate(30deg);}
+  }
+  
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
 // Colors :
 $ntnublue: #005BA7;
 $miljogreen: #0FA15C;
@@ -89,7 +123,7 @@ body {
     position: absolute;
     top: 9vw;
     right: 7vw;
-
+    animation: rotate-then-back 6s ease-in-out infinite;
 }
 
 .bigstar {
@@ -97,6 +131,7 @@ body {
     top: 3.5vw;
     right: 6vw;
     width: 7vw;
+    animation: spin 6s infinite;
 }
 
 .star {
@@ -104,6 +139,7 @@ body {
     top: 13vw;
     right: 2vw;
     width: 4.5vw;
+    animation: spin 4s linear infinite;
 }
 // End of Container blue wave
 
@@ -159,8 +195,79 @@ body {
   width: 100%;
   height: auto;
   z-index: 2;
+
+  &__img{
+    position: relative;
+  }
+
+  &__title{
+    font-family: 'Marydale-bold';
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center; 
+    font-size: 6vw;
+    }
 }
 // end of lightred-wave
+
+.cont--eye{
+  position: absolute;
+  z-index: 10;
+  top: 30vw;
+  height: 50%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  max-width: 60%;
+}
+
+.cont--eye-left{
+  display: flex;
+  height: 100%;
+  max-width: 50%;
+  padding: 0;
+
+  &--eye{
+    position: relative;
+    max-width: 65%;
+    left: 3vw;
+    bottom: 2vw;
+  }
+  &--eyeball{
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    max-width: 12%;
+}
+}
+
+.cont--eye-right {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  max-width: 50%;
+
+  &--eye{
+    position: relative;
+    max-width: 53%;
+    padding: 0;
+    bottom: 1vw;
+  }
+  &--eyeball{
+    position: absolute;
+    top: 24%;
+    right: 10.3%;
+    max-width: 5.4vw;
+}
+}
 
 
 // Earth
