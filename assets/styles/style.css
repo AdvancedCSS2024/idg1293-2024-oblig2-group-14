@@ -78,7 +78,18 @@ body {
 }
 
 .moon--drawing {
-  width: 50vw;
+  width: 30vw;
+}
+
+.moon--temp {
+  opacity: 0.5;
+}
+
+.item {
+  background-color: #EAEAE9;
+  width: 30vw;
+  border-radius: 360% 380% 335%/360%;
+  border: 4px solid black;
 }
 
 .header--white-wave {
@@ -114,7 +125,6 @@ body {
   top: 11vw;
   z-index: 4;
   width: 100%;
-  height: auto;
 }
 .cont--blue-wave__img {
   position: relative;
@@ -186,15 +196,12 @@ body {
   z-index: 2;
 }
 .cont--lightred-wave__item {
-  position: relative;
-}
-.cont--lightred-wave__item {
   z-index: 4;
   position: absolute;
   top: -12.5vw;
   left: 10vw;
   right: auto;
-  width: 80%;
+  width: 79vw;
 }
 
 .greenguy {
@@ -331,8 +338,9 @@ body {
 
 .footer {
   position: absolute;
-  top: 131.4vw;
+  top: 130.5vw;
   z-index: 5;
+  width: 100%;
 }
 .footer__img {
   width: 25vw;
@@ -360,9 +368,9 @@ body {
 .footer--blue {
   background-color: #005BA7;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 10%;
+  height: 10vw;
 }
 .footer--blue__img {
   width: 30vw;
@@ -378,4 +386,5 @@ body {
   font-family: "Marydale-bold";
   text-decoration: none;
   font-size: 1vw;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */
