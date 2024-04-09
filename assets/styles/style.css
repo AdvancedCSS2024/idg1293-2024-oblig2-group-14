@@ -57,8 +57,17 @@ body {
   margin: 0;
 }
 
-* {
-  border: 1px solid cyan;
+.body-draw {
+  margin: 5% 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moon--drawing {
+  width: 50vw;
 }
 
 .header--white-wave {
@@ -108,26 +117,35 @@ body {
   color: white;
   line-height: 1.1;
 }
+.cont--blue-wave__figure {
+  position: absolute;
+  right: 3vw;
+  top: 8.3vw;
+  padding-right: 8.5vw;
+}
 
 .moon {
-  position: absolute;
-  top: 9vw;
-  right: 7vw;
+  position: relative;
+  left: 0vw;
   width: 25vw;
   animation: rotate-then-back 6s ease-in-out infinite;
 }
 
+.moon:hover {
+  animation: spin 0.5s linear infinite;
+}
+
 .bigstar {
   position: absolute;
-  top: 3.5vw;
+  top: -4.6vw;
   right: 6vw;
-  width: 7vw;
+  width: 6.5vw;
   animation: spin 6s infinite;
 }
 
 .star {
   position: absolute;
-  top: 13vw;
+  top: 4.9vw;
   right: 2vw;
   width: 4.5vw;
   animation: spin 4s linear infinite;

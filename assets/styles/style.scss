@@ -55,15 +55,32 @@
 $ntnublue: #005BA7;
 $miljogreen: #0FA15C;
 
+* {
+
+}
 
 // Body
 body {
   margin: 0;
 }
 
-* {
-  border: 1px solid cyan;
+// drawing
+.body-draw {
+  margin: 5% 10%;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moon--drawing {
+  width: 50vw;
+}
+//
+
+// end of drawing
+
 
 // End of body
 
@@ -93,7 +110,6 @@ body {
       color: $ntnublue;
       margin-bottom: 0;
       
-  
       &--green {
           color: $miljogreen;
       }
@@ -103,8 +119,6 @@ body {
       font-family: 'Marydale-regular';
       font-size: 1.95vw;
       line-height: 1.1;
-
-     
     }
 }
 // End of white wave
@@ -131,30 +145,40 @@ body {
     color: white;
     line-height: 1.1;
   }
+
+  &__figure {
+    position: absolute;
+    right: 3vw;
+    top: 8.3vw;
+    padding-right: 8.5vw;
+  }
 }
 
 .moon {
-  position: absolute;
-  top: 9vw;
-  right: 7vw;
+  position: relative;
+  left: 0vw;
   width: 25vw;
-    animation: rotate-then-back 6s ease-in-out infinite;
+  animation: rotate-then-back 6s ease-in-out infinite;
+}
+
+.moon:hover{
+  animation: spin 0.5s linear infinite;
 }
 
 .bigstar {
-    position: absolute;
-    top: 3.5vw;
-    right: 6vw;
-    width: 7vw;
-    animation: spin 6s infinite;
+  position: absolute;
+  top: -4.6vw;
+  right: 6vw;
+  width: 6.5vw;
+  animation: spin 6s infinite;
 }
 
 .star {
-    position: absolute;
-    top: 13vw;
-    right: 2vw;
-    width: 4.5vw;
-    animation: spin 4s linear infinite;
+  position: absolute;
+  top: 4.9vw;
+  right: 2vw;
+  width: 4.5vw;
+  animation: spin 4s linear infinite;
 }
 // End of Blue wave
 
