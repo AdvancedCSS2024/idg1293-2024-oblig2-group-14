@@ -32,16 +32,16 @@
     transform: translate(-30%, 0px);
   }
   50% {
-    transform: translate(10%, 0px);
+    transform: translate(5%, 0px);
   }
 }
 
 @keyframes backAndForth-right {
   0%, 100% {
-    transform: translate(-60%, 0px);
+    transform: translate(-70%, 0px);
   }
   50% {
-    transform: translate(5%, 0px);
+    transform: translate(-5%, 0px);
   }
 }
 
@@ -365,8 +365,11 @@ padding: 0;
   position: absolute;
   top: 42px;
   left: 45px;
-  max-width: 47px;
+  width: 47px;
+  height: 49px;
+  background-color: white;
   animation: backAndForth-left 8s infinite;
+  border-radius: 81% 59% 35% 100% / 36% 89% 53% 95% 
 }
 }
 
@@ -392,8 +395,11 @@ left: 10px;
   position: absolute;
   top: 52px;
   right: 28px;
-  max-width: 38px;
+  width: 36px;
+  height: 64px;
   animation: backAndForth-right 8s infinite;
+  border-radius: 37% 58% 47% 47% / 35% 40% 46% 65%;
+  background-color: white;
 }
 }
 
