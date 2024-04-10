@@ -66,13 +66,18 @@ $miljogreen: #0FA15C;
 $lightred: rgb(199, 113, 97, 36%);
 
 // Body and poster
-body {
-  padding: 0px 100px
-}
-  
 @media (max-width: 760px) {
   body {
-    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: 760px) {
+  body {
+    padding: 50px 100px;
+    display: grid;
+    justify-content: center;
+    margin: 0;
   }
 }
 
@@ -88,6 +93,7 @@ body {
   height: 841px;
   width: 594px;
   background-color: $lightred;
+  border: 2px solid black;
 }
 // End of Body and poster
 

@@ -58,13 +58,17 @@
     transform: translateY(-20px);
   }
 }
-body {
-  padding: 0px 100px;
-}
-
 @media (max-width: 760px) {
   body {
-    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 760px) {
+  body {
+    padding: 50px 100px;
+    display: grid;
+    justify-content: center;
+    margin: 0;
   }
 }
 * {
@@ -79,6 +83,7 @@ body {
   height: 841px;
   width: 594px;
   background-color: rgba(199, 113, 97, 0.36);
+  border: 2px solid black;
 }
 
 .header--white-wave,
