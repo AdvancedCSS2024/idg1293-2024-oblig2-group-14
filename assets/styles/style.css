@@ -10,14 +10,6 @@
   font-family: "Open-sans";
   src: url("./fonts/Open Sans Bold.ttf") format("truetype"), url("./fonts/Open Sans Bold.woff") format("woff");
 }
-@keyframes diagonalLeftRight {
-  0%, 100% {
-    transform: translate(100px, 100px);
-  }
-  50% {
-    transform: translate(0px, 0px);
-  }
-}
 @keyframes backAndForth-left {
   0%, 100% {
     transform: translate(-30%, 0px);
