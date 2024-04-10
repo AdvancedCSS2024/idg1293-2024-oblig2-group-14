@@ -8,7 +8,7 @@ The first thing we did was picking a poster, we chose poster 2. We started with 
 
 noticeable unwanted things were removed, we moved on to optimizing the each of the SVGs that we were going to extract. We did this by using Object/Path/Simply, A tool that cuts down unnecessary anchor points and reduces the files size, while still maintaining the shape. Here is an example:
 
-![Before and after simplifying](documents\before-after.jpg)
+![Before and after simplifying](documents/before-after.jpg)
 
 It might seem unimportant but by doing this we were able to cut down ca. 100kb of unnecessary data. Here is an overview of how much of the size we were able to cut down by first removing unnecessary stuff and then after optimizing the elements.
 
