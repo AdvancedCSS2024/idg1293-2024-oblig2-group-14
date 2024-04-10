@@ -95,4 +95,13 @@
 			c-0.7,1.1-0.3,2.8,0.9,3.4C85.8,48.5,87.2,48.1,87.9,46.9L87.9,46.9z"/>
 	</g>
 </g>
+
+<animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="scale"
+            values="1;0.8;1"
+            begin="0s"
+            dur="3s"
+            repeatCount="indefinite"/>
 </svg>
