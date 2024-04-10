@@ -58,16 +58,20 @@
     transform: translateY(-20px);
   }
 }
-body {
-  padding: 0px 100px;
-}
-
 @media (max-width: 760px) {
   html {
     margin: 0;
   }
   body {
-    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 760px) {
+  body {
+    padding: 50px 100px;
+    display: grid;
+    justify-content: center;
+    margin: 0;
   }
 }
 * {
@@ -82,12 +86,19 @@ body {
   height: 841px;
   width: 594px;
   background-color: rgba(199, 113, 97, 0.36);
+  border: 2px solid black;
+}
+
+.header--white-wave,
+.cont--blue-wave,
+.cont--lightblue-wave,
+.cont--lightred-wave {
+  position: relative;
+  width: 100%;
 }
 
 .header--white-wave {
-  position: relative;
   z-index: 5;
-  width: 100%;
   height: auto;
 }
 .header--white-wave__item {
@@ -122,30 +133,25 @@ body {
   z-index: 4;
   width: 100%;
 }
-.cont--blue-wave__wrapper {
-  position: relative;
-  width: 100%;
-  height: 250px;
+.cont--blue-wave__img, .cont--blue-wave__text, .cont--blue-wave__figure {
+  position: absolute;
 }
 .cont--blue-wave__img {
-  position: absolute;
   top: 0;
 }
 .cont--blue-wave__text {
   font-family: "Marydale-bold";
   font-size: 10.5pt;
-  position: absolute;
+  line-height: 1.1;
   color: white;
   top: 110px;
-  line-height: 1.1;
   z-index: 5;
   padding-left: 30px;
 }
 .cont--blue-wave__figure {
-  position: absolute;
   top: 50px;
   width: 210px;
-  right: 0px;
+  right: 0;
 }
 
 .moon {
@@ -153,8 +159,11 @@ body {
   animation: rotate-then-back 6s ease-in-out infinite;
 }
 
-.bigstar {
+.bigstar, .star {
   position: absolute;
+}
+
+.bigstar {
   top: -20px;
   right: 45px;
   width: 43px;
@@ -162,7 +171,6 @@ body {
 }
 
 .star {
-  position: absolute;
   top: 40px;
   width: 30px;
   right: 20px;
@@ -170,8 +178,6 @@ body {
 }
 
 .cont--lightblue-wave {
-  position: relative;
-  width: 100%;
   height: auto;
 }
 .cont--lightblue-wave__img {
@@ -188,8 +194,6 @@ body {
 }
 
 .cont--lightred-wave {
-  position: relative;
-  width: 100%;
   height: 500px;
 }
 .cont--lightred-wave__img {
@@ -200,12 +204,19 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 7px;
+  top: 12px;
   width: 100%;
-  padding-right: 30px;
 }
 .cont--lightred-wave__icon--kids {
-  width: 80%;
+  width: 70%;
+  z-index: 5;
+}
+.cont--lightred-wave__icon--arm {
+  position: absolute;
+  width: 40px;
+  bottom: 100px;
+  left: 60px;
+  z-index: 3;
 }
 
 .greenguy {
@@ -286,7 +297,7 @@ body {
   font-size: 34px;
 }
 
-.cont--eye {
+.cont--eyes {
   position: absolute;
   z-index: 10;
   bottom: -30px;
@@ -301,19 +312,19 @@ body {
   z-index: 3;
 }
 
-.cont--eye-left {
+.cont--left {
   display: flex;
   height: 100%;
   width: 150px;
   padding: 0;
 }
-.cont--eye-left--eye {
+.cont--left--eye {
   left: 10px;
   position: relative;
   max-width: 60%;
   bottom: 20px;
 }
-.cont--eye-left--eyeball {
+.cont--left--eyeball {
   position: absolute;
   top: 42px;
   left: 45px;
@@ -324,21 +335,21 @@ body {
   border-radius: 81% 59% 35% 100%/36% 89% 53% 95%;
 }
 
-.cont--eye-right {
+.cont--right {
   display: flex;
   height: 100%;
   justify-content: center;
   max-width: 50%;
   left: 10px;
 }
-.cont--eye-right--eye {
+.cont--right--eye {
   position: relative;
   max-width: 53%;
   padding: 0;
   bottom: 10px;
   left: 20px;
 }
-.cont--eye-right--eyeball {
+.cont--right--eyeball {
   position: absolute;
   top: 52px;
   right: 28px;
@@ -405,7 +416,7 @@ body {
   z-index: 5;
 }
 .footer--blue__link {
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: "Marydale-bold";
   text-decoration: none;
   font-size: 5pt;
