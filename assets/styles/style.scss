@@ -441,7 +441,7 @@ background-color: $ntnublue;
 display: flex;
 justify-content: space-between;
 align-items: center;
-height: 40px;
+height: 35px;
 padding: 0 20px;
 
 &__img {
@@ -458,7 +458,7 @@ padding: 0 20px;
   color: rgb(255, 255, 255);
   font-family: 'Marydale-bold';
   text-decoration: none;
-  text-align: right;
+  font-size: 5pt;
 }
 }
 
