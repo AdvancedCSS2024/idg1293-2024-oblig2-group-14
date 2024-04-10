@@ -64,6 +64,23 @@ html, body {
   height: 100%;
 }
 
+#poster {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#svg-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  margin: 0;
+}
+
 .body-draw {
   margin: 5% 10%;
 }
@@ -74,18 +91,7 @@ html, body {
 }
 
 .moon--drawing {
-  width: 30vw;
-}
-
-.moon--temp {
-  opacity: 0.5;
-}
-
-.item {
-  background-color: #EAEAE9;
-  width: 30vw;
-  border-radius: 360% 380% 335%/360%;
-  border: 4px solid black;
+  width: 50vw;
 }
 
 .header--white-wave {
@@ -121,6 +127,7 @@ html, body {
   top: 11vw;
   z-index: 4;
   width: 100%;
+  height: auto;
 }
 .cont--blue-wave__img {
   position: relative;
@@ -192,12 +199,15 @@ html, body {
   z-index: 2;
 }
 .cont--lightred-wave__item {
+  position: relative;
+}
+.cont--lightred-wave__item {
   z-index: 4;
   position: absolute;
   top: -12.5vw;
   left: 10vw;
   right: auto;
-  width: 79vw;
+  width: 80%;
 }
 
 .greenguy {
@@ -334,9 +344,8 @@ html, body {
 
 .footer {
   position: absolute;
-  top: 130.5vw;
+  top: 131.4vw;
   z-index: 5;
-  width: 100%;
 }
 .footer__img {
   width: 25vw;
@@ -364,9 +373,9 @@ html, body {
 .footer--blue {
   background-color: #005BA7;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  height: 10vw;
+  height: 10%;
 }
 .footer--blue__img {
   width: 30vw;
@@ -382,5 +391,4 @@ html, body {
   font-family: "Marydale-bold";
   text-decoration: none;
   font-size: 1vw;
-  text-align: right;
 }/*# sourceMappingURL=style.css.map */
