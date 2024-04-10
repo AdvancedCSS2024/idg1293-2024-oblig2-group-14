@@ -1,20 +1,494 @@
-// USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+// Fonts
 @font-face {
-    font-family: 'Marydale-bold';
-    src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Bold.woff') format('woff');
-  }
-  
-  @font-face {
-    font-family: 'Marydale-regular';
-    src: url('./fonts/Marydale\ Regular.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Regular.woff') format('woff');
-  }
+  font-family: 'Marydale-bold';
+  src: url('./fonts/Marydale\ Bold.ttf') format('truetype'),
+  url('./fonts/Marydale\ Bold.woff') format('woff');
+}
 
-  @font-face {
+@font-face {
+  font-family: 'Marydale-regular';
+  src: url('./fonts/Marydale\ Regular.ttf') format('truetype'),
+  url('./fonts/Marydale\ Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open-sans';
+  src: url('./fonts/Open\ Sans\ Bold.ttf') format('truetype'),
+  url('./fonts/Open\ Sans\ Bold.woff') format('woff');
+}
+
+
+@keyframes diagonalLeftRight {
+  0%, 100% {
+    transform: translate(100px, 100px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes backAndForth {
+  0%, 100% {
+    transform: translate(-30%, 0px);
+  }
+  50% {
+    transform: translate(15%, 0px);
+  }
+}
+
+@keyframes backAndForth-right {
+  0%, 100% {
+    transform: translate(-60%, 0px);
+  }
+  50% {
+    transform: translate(5%, 0px);
+  }
+}
+
+@keyframes rotate-then-back {
+  0%, 100% {transform: rotate(-30deg);}
+  50% {transform: rotate(30deg);}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+// Colors :
+$ntnublue: #005BA7;
+$miljogreen: #0FA15C;
+
+body{
+margin: 0;
+padding: 0 100px;
+}
+
+* {
+// border: solid 3px red;
+box-sizing: border-box;
+}
+
+#poster {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+position: relative;
+height: 841px;
+width: 594px;
+background-color: #E8C6C6;
+}
+
+// drawing  
+.body-draw {
+margin: 5% 10%;
+}
+
+.container {
+display: flex;
+justify-content: space-between;
+}
+
+.moon--drawing {
+width: 30vw;
+}
+
+.moon--temp {
+opacity: 0.5;
+}
+
+.item {
+// background-color: #B4B6B7;
+background-color: #EAEAE9;
+width: 30vw;
+// border-radius: 260% 320% 315%;
+// border-radius: 360% 380% 375% 420%;
+border-radius: 360% 380% 335% /360%;
+border: 4px solid black;
+
+}
+//
+
+// end of drawing
+
+
+// End of body
+
+// Commons 
+
+
+// End of commons
+
+// White wave
+.header--white-wave {
+position: relative;
+z-index: 5;
+width: 100%;
+height: auto;
+
+&__item {
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  padding: 10px 0 0 20px;
+}
+
+&__title {
+  margin: 0;
     font-family: 'Open-sans';
-    src: url('./fonts/Marydale\ Bold.ttf') format('truetype');
-    src: url('./fonts/Marydale\ Bold.woff') format('woff');
-  } 
+    font-size: 28px;
+    color: $ntnublue;
+    
+    &--green {
+        color: $miljogreen;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Marydale-regular';
+    font-size: 16px;
+    line-height: 1.1;
+  }
+}
+
+.white-wave__img {
+position: absolute;
+top: 0;
+}
+// End of white wave
 
 
+// Blue wave
+.cont--blue-wave {
+position: absolute;
+top: 60px;
+z-index: 4;
+width: 100%;
+
+&__wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+&__img {
+  position: absolute;
+  top: 0;
+}
+
+&__text {
+  font-family: "Marydale-bold";
+  position: absolute;
+  color: white;
+  line-height: 1.1;
+}
+
+&__figure {
+  position: absolute;
+  top: 40px;
+  width: 210px;
+  right: 20px;
+}
+}
+
+.moon {
+width: 150px;
+animation: rotate-then-back 6s ease-in-out infinite;
+}
+
+.bigstar {
+position: absolute;
+top: -10px;
+width: 60px;
+animation: spin 6s infinite;
+}
+
+
+.star {
+position: absolute;
+top: 50px;
+width: 40px;
+animation: spin 4s linear infinite;
+}
+// End of Blue wave
+
+
+// Lightblue wave
+.cont--lightblue-wave {
+position: relative;
+top: 210px;
+width: 100%;
+height: 400px;
+
+&__img {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+}
+
+// Car svg
+&__icon--car {
+  position: absolute;
+  top: -20px;
+  width: 280px;
+  padding-left: 5vw;
+  z-index: 4;
+}
+}
+// End of Lightblue wave
+
+
+// Lightred "wave" 
+.cont--lightred-wave {
+position: relative;
+width: 100%;
+height: 500px;
+
+&__img {
+  z-index: 2;
+}
+
+//kids svg
+&__item {
+  z-index: 4;
+  position: absolute;
+  top: -120px;
+    width: 100%;
+  }
+
+  &__icon--kids {
+    width: 100%;
+  }
+}
+
+// GreenGuys 
+.greenguy {
+position: absolute;
+top: 0;
+
+&--group {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  z-index: 1000;
+}
+
+&--small {
+  width: 4.5vw;
+  animation: bounce 4s linear infinite;
+}
+
+&--medium {
+  width: 5.5vw;
+  animation: bounce 2s linear infinite;
+}
+
+&--large {
+  width: 9.6vw;
+  animation: bounce 3s linear infinite;
+}
+}
+
+.greenguy:hover{
+animation: spin 0.5s linear infinite;
+}
+
+#gg-1 {
+top: 0;
+}
+
+#gg-2 {
+top: 0;
+left: 0;
+}
+
+#gg-3 {
+top: 0;
+left: 0;
+}
+
+#gg-4 {
+top: 0;
+left: 0;
+}
+
+#gg-5 {
+top: 0;
+left: 0;
+}
+
+#gg-5 {
+top: 0;
+left: 0;
+}
+
+#gg-6 {
+top: 0;
+right: 0;
+}
+// End of GreenGuy (rip the hulk)
+
+// Earth
+.cont--earth {
+position: absolute;
+bottom: 0;
+width: 100%;
+z-index: 2;
+
+&__img{
+  width: 100%;
+}
+
+&__title{
+  font-family: 'Marydale-bold';
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center; 
+  font-size: 16px;
+  }
+}
+// end of lightred-wave
+
+.cont--eye{
+position: absolute;
+z-index: 10;
+bottom: -30px;
+height: 200px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+justify-content: space-between;
+align-items: center; 
+width: 100%;
+max-width: 60%;
+z-index: 3;
+}
+
+.cont--eye-left{
+display: flex;
+height: 100%;
+width: 150px;
+padding: 0;
+
+&--eye{
+  position: relative;
+  max-width: 60%;
+  left: 3vw;
+  bottom: 2vw;
+}
+&--eyeball{
+  position: absolute;
+  top: 15%;
+  left: 13%;
+  max-width: 30px;
+  // animation: backAndForth 8s infinite;
+}
+}
+
+.cont--eye-right {
+display: flex;
+height: 100%;
+justify-content: center;
+max-width: 50%;
+
+&--eye{
+  position: relative;
+  max-width: 53%;
+  padding: 0;
+  bottom: 1vw;
+}
+
+&--eyeball{
+  position: absolute;
+  top: 24%;
+  right: 10.3%;
+  max-width: 30px;
+  // animation: backAndForth-right 8s infinite;
+}
+}
+
+// eyes
+
+// End of Eye 
+
+// End of Earth (WHAT?!)
+// End of Lightred "wave"
+
+
+// Footer
+.footer {
+position: absolute;
+bottom: 0;
+z-index: 5;
+width: 100%;
+margin: 0;
+font-size: 8px;
+
+&__img {
+  width: 25vw;
+}
+
+&__link {
+  display: flex;
+  justify-content: flex-end;
+}
+}
+
+// White Footer
+.footer--white {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+padding: 0;
+height: 25px;
+
+&__text {
+  margin: 0;
+  font-size: 6.5px;
+  padding: 0 30px;
+  text-align: left;
+  font-family: "Marydale-bold";
+  width: 100%;
+}
+}
+// End of White Footer
+
+// Blue Footer
+.footer--blue {
+background-color: $ntnublue;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 40px;
+padding: 0 20px;
+
+&__img {
+  width: 200px;
+}
+
+&__item {
+  &--divider {
+    z-index: 5;
+  }
+}
+
+&__link {
+  color: rgb(255, 255, 255);
+  font-family: 'Marydale-bold';
+  text-decoration: none;
+  text-align: right;
+}
+}
+
+// End of Blue Footer
+// End of Footer
