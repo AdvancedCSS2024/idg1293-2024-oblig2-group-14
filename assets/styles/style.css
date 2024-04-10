@@ -197,12 +197,19 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 7px;
+  top: 12px;
   width: 100%;
-  padding-right: 30px;
 }
 .cont--lightred-wave__icon--kids {
-  width: 80%;
+  width: 70%;
+  z-index: 5;
+}
+.cont--lightred-wave__icon--arm {
+  position: absolute;
+  width: 40px;
+  bottom: 100px;
+  left: 60px;
+  z-index: 3;
 }
 
 .greenguy {
