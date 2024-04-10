@@ -27,12 +27,12 @@
   }
 }
 
-@keyframes backAndForth {
+@keyframes backAndForth-left {
   0%, 100% {
     transform: translate(-30%, 0px);
   }
   50% {
-    transform: translate(15%, 0px);
+    transform: translate(10%, 0px);
   }
 }
 
@@ -70,7 +70,6 @@ padding: 0 100px;
 }
 
 * {
-border: solid 1px cyan;
 box-sizing: border-box;
 }
 
@@ -122,7 +121,6 @@ top: 0;
 }
 // End of white wave
 
-
 // Blue wave
 .cont--blue-wave {
 position: absolute;
@@ -162,7 +160,7 @@ width: 100%;
 
 .moon {
 width: 135px;
-// animation: rotate-then-back 6s ease-in-out infinite;
+animation: rotate-then-back 6s ease-in-out infinite;
 }
 
 .bigstar {
@@ -170,7 +168,7 @@ position: absolute;
 top: -20px;
 right: 45px;
 width: 43px;
-// animation: spin 6s infinite;
+animation: spin 6s infinite;
 }
 
 .star {
@@ -178,7 +176,7 @@ position: absolute;
 top: 40px;
 width: 30px;
 right: 20px;
-// animation: spin 4s linear infinite;
+animation: spin 4s linear infinite;
 }
 // End of Blue wave
 
@@ -247,23 +245,23 @@ position: absolute;
 
 &--small {
   width: 25px;
-  // animation: bounce 4s linear infinite;
+  animation: bounce 4s linear infinite;
 }
 
 &--medium {
   width: 38px;
-  // animation: bounce 2s linear infinite;
+  animation: bounce 2s linear infinite;
 }
 
 &--large {
   width: 60px;
-  // animation: bounce 3s linear infinite;
+  animation: bounce 3s linear infinite;
 }
 }
 
-// .greenguy:hover{
-// animation: spin 0.5s linear infinite;
-// }
+.greenguy:hover{
+animation: spin 0.5s linear infinite;
+}
 
 #gg-1 {
   bottom: 35px;
@@ -311,12 +309,12 @@ z-index: 2;
   font-family: 'Marydale-bold';
   z-index: 10;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 55%;
   transform: translate(-50%, -50%);
   width: 50%;
   text-align: center;
-  font-size: 16px;
+  font-size: 34px;
   }
 }
 // end of lightred-wave
@@ -336,6 +334,7 @@ max-width: 60%;
 z-index: 3;
 }
 
+// Left eye
 .cont--eye-left{
 display: flex;
 height: 100%;
@@ -343,39 +342,44 @@ width: 150px;
 padding: 0;
 
 &--eye{
+  left: 10px;
   position: relative;
   max-width: 60%;
-  left: 3vw;
-  bottom: 2vw;
+  bottom: 20px;
 }
 &--eyeball{
   position: absolute;
-  top: 15%;
-  left: 13%;
-  max-width: 30px;
-  // animation: backAndForth 8s infinite;
+  top: 42px;
+  left: 45px;
+  max-width: 47px;
+  animation: backAndForth-left 8s infinite;
 }
 }
 
+// right eye
 .cont--eye-right {
 display: flex;
 height: 100%;
 justify-content: center;
 max-width: 50%;
+left: 10px;
+
 
 &--eye{
   position: relative;
   max-width: 53%;
   padding: 0;
-  bottom: 1vw;
+  bottom: 10px;
+  left: 20px;
+
 }
 
 &--eyeball{
   position: absolute;
-  top: 24%;
-  right: 10.3%;
-  max-width: 30px;
-  // animation: backAndForth-right 8s infinite;
+  top: 52px;
+  right: 28px;
+  max-width: 38px;
+  animation: backAndForth-right 8s infinite;
 }
 }
 
