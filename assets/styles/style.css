@@ -59,10 +59,14 @@
   }
 }
 body {
-  margin: 0;
-  padding: 0 100px;
+  padding: 0px 100px;
 }
 
+@media (max-width: 760px) {
+  body {
+    padding: 0;
+  }
+}
 * {
   border: solid 1px cyan;
   box-sizing: border-box;
