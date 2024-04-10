@@ -1,24 +1,15 @@
-// Fonts
 @font-face {
-  font-family: 'Marydale-bold';
-  src: url('./fonts/Marydale\ Bold.ttf') format('truetype'),
-  url('./fonts/Marydale\ Bold.woff') format('woff');
+  font-family: "Marydale-bold";
+  src: url("./fonts/Marydale Bold.ttf") format("truetype"), url("./fonts/Marydale Bold.woff") format("woff");
 }
-
 @font-face {
-  font-family: 'Marydale-regular';
-  src: url('./fonts/Marydale\ Regular.ttf') format('truetype'),
-  url('./fonts/Marydale\ Regular.woff') format('woff');
+  font-family: "Marydale-regular";
+  src: url("./fonts/Marydale Regular.ttf") format("truetype"), url("./fonts/Marydale Regular.woff") format("woff");
 }
-
 @font-face {
-  font-family: 'Open-sans';
-  src: url('./fonts/Open\ Sans\ Bold.ttf') format('truetype'),
-  url('./fonts/Open\ Sans\ Bold.woff') format('woff');
+  font-family: "Open-sans";
+  src: url("./fonts/Open Sans Bold.ttf") format("truetype"), url("./fonts/Open Sans Bold.woff") format("woff");
 }
-
-// Animations
-
 @keyframes backAndForth-left {
   0%, 100% {
     transform: translate(-30%, 0px);
@@ -27,7 +18,6 @@
     transform: translate(5%, 0px);
   }
 }
-
 @keyframes backAndForth-right {
   0%, 100% {
     transform: translate(-70%, 0px);
@@ -36,28 +26,30 @@
     transform: translate(-5%, 0px);
   }
 }
-
 @keyframes rotate-then-back {
-  0%, 100% {transform: rotate(-30deg);}
-  50% {transform: rotate(30deg);}
+  0%, 100% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
 }
-
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
-
-// Colors 
-$ntnublue: #005BA7;
-$miljogreen: #0FA15C;
-$lightred: rgb(199, 113, 97, 36%);
-
-// Body and poster
 @media (max-width: 760px) {
   html {
     margin: 0;
@@ -66,7 +58,6 @@ $lightred: rgb(199, 113, 97, 36%);
     margin: 0;
   }
 }
-
 @media (min-width: 760px) {
   body {
     padding: 50px 100px;
@@ -74,8 +65,6 @@ $lightred: rgb(199, 113, 97, 36%);
     justify-content: center;
     margin: 0;
   }
-
-
 }
 * {
   box-sizing: border-box;
@@ -88,12 +77,10 @@ $lightred: rgb(199, 113, 97, 36%);
   position: relative;
   height: 841px;
   width: 594px;
-  background-color: $lightred;
+  background-color: rgba(199, 113, 97, 0.36);
   border: 2px solid black;
 }
-// End of Body and poster
 
-// Waves
 .header--white-wave,
 .cont--blue-wave,
 .cont--lightblue-wave,
@@ -102,58 +89,49 @@ $lightred: rgb(199, 113, 97, 36%);
   width: 100%;
 }
 
-// White wave
 .header--white-wave {
   z-index: 5;
   height: auto;
-
-&__item {
+}
+.header--white-wave__item {
   position: absolute;
   top: 0;
   z-index: 6;
   padding: 30px 0 0 30px;
 }
-
-&__title {
+.header--white-wave__title {
   margin: 0;
-    font-family: 'Open-sans';
-    font-size: 24px;
-    color: $ntnublue;
-
-    &--green {
-        color: $miljogreen;
-    }
-  }
-
-  &__subtitle {
-    font-family: 'Marydale-regular';
-    font-size: 12px;
-    line-height: 1.3;
-  }
+  font-family: "Open-sans";
+  font-size: 24px;
+  color: #005BA7;
+}
+.header--white-wave__title--green {
+  color: #0FA15C;
+}
+.header--white-wave__subtitle {
+  font-family: "Marydale-regular";
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 .white-wave__img {
   position: absolute;
   top: 0;
 }
-// End of white wave
 
-// Blue wave
 .cont--blue-wave {
   position: absolute;
   top: 60px;
   z-index: 4;
   width: 100%;
-
-&__img, &__text, &__figure {
+}
+.cont--blue-wave__img, .cont--blue-wave__text, .cont--blue-wave__figure {
   position: absolute;
 }
-
-&__img {
+.cont--blue-wave__img {
   top: 0;
 }
-
-&__text {
+.cont--blue-wave__text {
   font-family: "Marydale-bold";
   font-size: 10.5pt;
   line-height: 1.1;
@@ -162,15 +140,12 @@ $lightred: rgb(199, 113, 97, 36%);
   z-index: 5;
   padding-left: 30px;
 }
-
-&__figure {
+.cont--blue-wave__figure {
   top: 50px;
   width: 210px;
   right: 0;
 }
-}
 
-// Moon and stars
 .moon {
   width: 135px;
   animation: rotate-then-back 6s ease-in-out infinite;
@@ -193,95 +168,73 @@ $lightred: rgb(199, 113, 97, 36%);
   right: 20px;
   animation: spin 4s linear infinite;
 }
-// End of moon and stars
-// End of Blue wave
 
-
-// Lightblue wave
 .cont--lightblue-wave {
   height: auto;
-
-&__img {
+}
+.cont--lightblue-wave__img {
   z-index: 3;
   position: absolute;
   top: 10px;
 }
-
-// Car svg
-&__icon--car {
+.cont--lightblue-wave__icon--car {
   position: absolute;
   top: -200px;
   /* width: 350px; */
   /* padding-left: 30px; */
   z-index: 8;
 }
-}
-// End of car
-// End of Lightblue wave
 
-
-// Lightred "wave"
 .cont--lightred-wave {
   height: 500px;
-
-&__img {
+}
+.cont--lightred-wave__img {
   z-index: 2;
 }
-
-//kids svg
-&__item {
+.cont--lightred-wave__item {
   z-index: 4;
   display: flex;
   justify-content: center;
   position: absolute;
   top: 12px;
   width: 100%;
-  }
-
-  &__icon--kids {
-    width: 70%;
-    z-index: 5;
-  }
-
-  &__icon--arm {
-    position: absolute;
-    width: 40px;
-    bottom: 100px;
-    left: 60px;
-    z-index: 3;
-  } 
 }
-// End of kids svg
+.cont--lightred-wave__icon--kids {
+  width: 70%;
+  z-index: 5;
+}
+.cont--lightred-wave__icon--arm {
+  position: absolute;
+  width: 40px;
+  bottom: 100px;
+  left: 60px;
+  z-index: 3;
+}
 
-// GreenGuys
 .greenguy {
   position: absolute;
-
-&--group {
+}
+.greenguy--group {
   width: 100%;
   height: 140px;
   position: absolute;
   top: 175px;
   z-index: 100;
 }
-
-&--small {
+.greenguy--small {
   width: 25px;
   animation: bounce 4s linear infinite;
 }
-
-&--medium {
+.greenguy--medium {
   width: 38px;
   animation: bounce 2s linear infinite;
 }
-
-&--large {
+.greenguy--large {
   width: 60px;
   animation: bounce 3s linear infinite;
 }
-}
 
-.greenguy:hover{
+.greenguy:hover {
   animation: spin 0.5s linear infinite;
 }
 
@@ -314,21 +267,18 @@ $lightred: rgb(199, 113, 97, 36%);
   bottom: 30px;
   right: 75px;
 }
-// End of GreenGuy (rip the hulk)
 
-// Earth
 .cont--earth {
   position: absolute;
   bottom: 55px;
   width: 100%;
   z-index: 2;
-
-&__img{
+}
+.cont--earth__img {
   width: 100%;
 }
-
-&__title{
-  font-family: 'Marydale-bold';
+.cont--earth__title {
+  font-family: "Marydale-bold";
   z-index: 10;
   position: absolute;
   top: 45%;
@@ -338,11 +288,8 @@ $lightred: rgb(199, 113, 97, 36%);
   text-align: center;
   font-size: 34px;
 }
-}
-// End of Earth (WHAT?!)
 
-// Eyes
-.cont--eyes{
+.cont--eyes {
   position: absolute;
   z-index: 10;
   bottom: -30px;
@@ -357,20 +304,19 @@ $lightred: rgb(199, 113, 97, 36%);
   z-index: 3;
 }
 
-// Left eye
-.cont--left{
+.cont--left {
   display: flex;
   height: 100%;
   width: 150px;
   padding: 0;
-
-&--eye{
+}
+.cont--left--eye {
   left: 10px;
   position: relative;
   max-width: 60%;
   bottom: 20px;
 }
-&--eyeball{
+.cont--left--eyeball {
   position: absolute;
   top: 42px;
   left: 45px;
@@ -378,42 +324,34 @@ $lightred: rgb(199, 113, 97, 36%);
   height: 49px;
   background-color: white;
   animation: backAndForth-left 8s infinite;
-  border-radius: 81% 59% 35% 100% / 36% 89% 53% 95% 
-}
+  border-radius: 81% 59% 35% 100%/36% 89% 53% 95%;
 }
 
-// Right eye
 .cont--right {
   display: flex;
   height: 100%;
   justify-content: center;
   max-width: 50%;
   left: 10px;
-
-
-&--eye{
+}
+.cont--right--eye {
   position: relative;
   max-width: 53%;
   padding: 0;
   bottom: 10px;
   left: 20px;
-
 }
-
-&--eyeball{
+.cont--right--eyeball {
   position: absolute;
   top: 52px;
   right: 28px;
   width: 36px;
   height: 64px;
   animation: backAndForth-right 8s infinite;
-  border-radius: 37% 58% 47% 47% / 35% 40% 46% 65%;
+  border-radius: 37% 58% 47% 47%/35% 40% 46% 65%;
   background-color: white;
 }
-}
-// End of Eyes
 
-// Qr-code
 .qr-code {
   z-index: 10;
   width: 50px;
@@ -421,10 +359,7 @@ $lightred: rgb(199, 113, 97, 36%);
   bottom: 70px;
   left: 10px;
 }
-// End of qr-code
-// End of Lightred "wave"
 
-// Footer
 .footer {
   position: absolute;
   bottom: 0;
@@ -432,18 +367,15 @@ $lightred: rgb(199, 113, 97, 36%);
   width: 100%;
   margin: 0;
   font-size: 8px;
-
-&__img {
+}
+.footer__img {
   width: 25vw;
 }
-
-&__link {
+.footer__link {
   display: flex;
   justify-content: flex-end;
 }
-}
 
-// White Footer
 .footer--white {
   display: flex;
   justify-content: center;
@@ -451,8 +383,8 @@ $lightred: rgb(199, 113, 97, 36%);
   background-color: white;
   padding: 0;
   height: 25px;
-
-&__text {
+}
+.footer--white__text {
   margin: 0;
   font-size: 6.5px;
   padding: 0 30px;
@@ -460,35 +392,24 @@ $lightred: rgb(199, 113, 97, 36%);
   font-family: "Marydale-bold";
   width: 100%;
 }
-}
-// End of White Footer
 
-// Blue Footer
 .footer--blue {
-  background-color: $ntnublue;
+  background-color: #005BA7;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 35px;
   padding: 0 20px;
-
-&__img {
+}
+.footer--blue__img {
   width: 200px;
 }
-
-&__item {
-  &--divider {
-    z-index: 5;
-  }
+.footer--blue__item--divider {
+  z-index: 5;
 }
-
-&__link {
+.footer--blue__link {
   color: white;
-  font-family: 'Marydale-bold';
+  font-family: "Marydale-bold";
   text-decoration: none;
   font-size: 5pt;
-}
-}
-
-// End of Blue Footer
-// End of Footer
+}/*# sourceMappingURL=style.css.map */
